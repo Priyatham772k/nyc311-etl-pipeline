@@ -4,7 +4,8 @@ import pandas as pd
 import sys
 import os
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), "src"))
+src_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "src")
+sys.path.insert(0, src_path)
 from pipeline import run_pipeline
 
 DB_PATH = "data/clean/nyc311.duckdb"
