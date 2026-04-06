@@ -4,7 +4,7 @@ import pandas as pd
 CLEAN_PATH = "data/clean/nyc311_clean.csv"
 DB_PATH    = "data/clean/nyc311.duckdb"
 
-def load():
+def run():
     print("Loading clean data into DuckDB database...")
 
     df  = pd.read_csv(CLEAN_PATH)
@@ -58,4 +58,4 @@ def load():
     print(f"\nDatabase saved to {DB_PATH}")
 
 if __name__ == "__main__":
-    load()
+    run()

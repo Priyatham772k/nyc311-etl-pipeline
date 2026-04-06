@@ -15,15 +15,15 @@ def run_pipeline():
     try:
         print("\n[1/3] EXTRACT")
         print("-" * 30)
-        extract_mod.extract()
+        extract_mod.run()
 
         print("\n[2/3] TRANSFORM")
         print("-" * 30)
-        transform_mod.transform()
+        transform_mod.run()
 
         print("\n[3/3] LOAD")
         print("-" * 30)
-        load_mod.load()
+        load_mod.run()
 
         elapsed = round(time.time() - start, 2)
         print("\n" + "=" * 50)

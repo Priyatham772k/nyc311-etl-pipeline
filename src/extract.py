@@ -1,4 +1,3 @@
-
 import requests
 import pandas as pd
 import os
@@ -7,7 +6,7 @@ RAW_PATH = "data/raw/nyc311_raw.csv"
 API_URL = "https://data.cityofnewyork.us/resource/erm2-nwe9.csv"
 LIMIT = 10000
 
-def extract():
+def run():
     print("Extracting data from NYC Open Data API...")
     params = {
         "$limit": LIMIT,
@@ -27,4 +26,4 @@ def extract():
     return df
 
 if __name__ == "__main__":
-    extract()
+    run()
